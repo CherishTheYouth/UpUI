@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Demo</h1>
+  <div id="app"></div>
+</body>
+</html>
+<script type="module">
+import { createApp } from 'vue/dist/vue.esm-bundler.js'
+import UpUI, { MyButton, UpButton, JSXButton } from '../../dist/up-ui.esm.js'
+
+createApp({
+  template: `
+    <div>
+        <MyButton color="white">普通按钮</MyButton>
+        <MyButton color="black">普通按钮</MyButton>
+        <MyButton color="red">普通按钮</MyButton>
+        <MyButton color="yellow">普通按钮</MyButton>
+        <MyButton color="green">普通按钮</MyButton>
+        <MyButton color="blue">普通按钮</MyButton>
+        <MyButton color="indigo">普通按钮</MyButton>
+        <MyButton color="purple">普通按钮</MyButton>
+        <MyButton color="pink">普通按钮</MyButton>
+        <MyButton color="gray">普通按钮</MyButton>
+        <MyButton color="pink" />
+    </div>
+    `,
+  })
+  .component(UpButton.name, UpButton)
+  .component(JSXButton.name, JSXButton)
+  .component(MyButton.name, MyButton)
+  .mount("#app")
+</script>

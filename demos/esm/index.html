@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../dist/assets/entry.8eaca2d5.css">
+</head>
+<body>
+  <h1>Demo</h1>
+  <div id="app"></div>
+</body>
+</html>
+<script type="module">
+import { createApp } from 'vue/dist/vue.esm-bundler.js'
+import UpUI, { MyButton, UpButton, JSXButton } from '../../dist/up-ui.esm.js'
+
+createApp({
+  template: `
+    <MyButton color="pink" icon="share">这是一个按钮</MyButton>
+    <UpButton />
+    <JSXButton />
+  `
+}).use(UpUI).mount('#app')
+</script>
