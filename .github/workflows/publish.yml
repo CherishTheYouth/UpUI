@@ -1,12 +1,11 @@
-name: CI
+name: Publish Npm
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 jobs:
   Lint:
     # Lint任务
   UnitTest:
     # 单元测试任务
-    
